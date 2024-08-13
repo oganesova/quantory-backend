@@ -30,19 +30,20 @@ URL: GET -  http://localhost:3001/profile
 **Description**: Authenticates a user and returns a JWT access token.
 
 **Request Body**:
-```json
+
 {
   "email": "string",
   "password": "string"
 }
 Response:
 200 OK:
-json
+
 {
   "accessToken": "string"
 }
+
 403 Forbidden:
-json
+
 {
   "message": "User not found" 
 }
@@ -56,27 +57,23 @@ Authorization: Bearer <accessToken>
 Response:
 
 200 OK:
-json
 
 {
   "email": "string",
   "username": "string"
 }
-401 Unauthorized:
-json
 
+401 Unauthorized:
 {
   "message": "Unauthorized"
 }
 403 Forbidden:
-json
-Копировать код
+
 {
   "message": "Forbidden"
 }
 404 Not Found:
-json
-Копировать код
+
 {
   "message": "User not found"
 }
